@@ -1,0 +1,25 @@
+{
+  "name": "file_metadata",
+  "version": "1.0.0",
+  "description": "Free Code Camp Exercises",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SCOBARS900/file-metadata-scobars.git"
+  },
+  "author": "Julio Escobar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SCOBARS900/file-metadata-scobars/issues"
+  },
+  "homepage": "https://github.com/SCOBARS900/file-metadata-scobars#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cors": "^2.8.3",
+    "express": "^4.15.3",
+    "multer": "^1.3.0"
+  }
+}
