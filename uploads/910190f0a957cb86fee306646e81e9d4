@@ -1,0 +1,23 @@
+ shortUrlS.findOne({'shorterUrl': numberUrl}, (err, data)=>{
+      if(err) {
+          return res.send('Error reading database');
+      } else {
+          var re = new RegExp("^(http|https)://", "i");
+          var strToCheck = data.originalUrl;
+          if(re.test(strToCheck)){
+              res.redirect(301, data.originalUrl);
+          } else {
+              res.redirect(301, 'http://' + data.originalUrl);
+          }
+      }
+       
+   });
+
+
+var numberUrl = req.params.urlToForward;
+   
+    var youtube = shortUrlSchema.findOne({ 'originalUrl': 'www.youtube.com'});
+   
+    if (numberUrl == 114) {
+        console.log(youtube);
+    }

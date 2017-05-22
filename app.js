@@ -1,9 +1,12 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var cors = require('cors');
+var multer  = require('multer')
 
 
 var app = express();
+
+var upload = multer({ dest: 'uploads/' });
 
 app.use(express.static('public'));
 
@@ -12,10 +15,9 @@ app.use(cors());
 
 
 
-app.get('/filesize', function(req, res) {
+app.post('/filesize', upload.single('fileC'), function(req, res, next) {
     
- 
- 
+return res.json( {"size": req.file.size} );
 
 });
 

@@ -18,22 +18,19 @@
                 <li>2) When I submit something, I will receive the file size in bytes within the JSON response.</li>
                 </ul>    
             </div>
-                
+              
+            <form action="/filesize" method="post" enctype="multipart/form-data">
+            <label class="custom-file-upload" for="file">
+            <input id="file" name="fileC" type="file">  
+            </label>
+            <input type="submit" id="submitB">
+            </form>
+        
+             
+             
             
-            <section>
-            <input id="imputDate" placeholder="Search" ng-model="imageP">
-            <a class="btn btn-default" href="https://image-search-scobars.herokuapp.com/flickrlist/{{ imageP }}">Go</a>  
-            </section>
-            <br>
-            <a class="btn btn-default" href="https://image-search-scobars.herokuapp.com/recentsearch">Recent Searchs</a>
-            <br>
-            <h3>Search directly from the browser</h3>
-            <p>Example: https://image-search-scobars.herokuapp.com/flickrlist/lion</p>
-            <h3>Example with paginate parameter</h3>
-            <p>Example to access page 5: https://image-search-scobars.herokuapp.com/flickrlist/lion?offset=5 </p>
-            <h3>Access recent searchs directly from the browser</h3>
-            <p>Example: https://image-search-scobars.herokuapp.com/recentsearch</p>
             
+        
  
          
             </div>
